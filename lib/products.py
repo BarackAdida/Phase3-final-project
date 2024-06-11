@@ -12,6 +12,10 @@ class Products:
 
     @classmethod
     def create_table(cls):
+        # Enable foreign key support
+        cursor.execute("PRAGMA foreign_keys = ON")
+
+        # Create the Products table
         sql = """
             CREATE TABLE IF NOT EXISTS Products(
             product_id INTEGER PRIMARY KEY,
@@ -21,7 +25,6 @@ class Products:
             quantity INTEGER
             )
         """
-
         cursor.execute(sql)
         conn.commit()
 
@@ -32,4 +35,12 @@ class Products:
         """
         
         cursor.execute(sql)
+        conn.commit()
+
+    @classmethod
+    def insert_product(cls, name, description, price, quantity):
+        sql = """
+            INSERT INTO Products (name, description, price, quantity) VALUES (?, ?, ?, ?)
+        """
+        cursor.execute(sql, (name, description, price, quantity))
         conn.commit()

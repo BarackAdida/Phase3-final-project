@@ -27,3 +27,11 @@ class Vendor:
         """
         cursor.execute(sql)
         conn.commit()
+
+    @classmethod
+    def insert_vendor(cls, name, contact_info):
+        sql = """
+            INSERT INTO Vendors (name, contact_info) VALUES (?, ?)
+        """
+        cursor.execute(sql, (name, contact_info))
+        conn.commit()

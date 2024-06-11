@@ -1,18 +1,22 @@
-# lib/script.py
+# script.py
 
 from config import conn
 from purchases import Purchases
 from products import Products
-from vendors import Vendor 
+from vendors import Vendor
 
-# Create the Purchases table
+# Create the tables
 Purchases.create_table()
-
-# Create the Products table
 Products.create_table()
-
-# Create the Vendor table
 Vendor.create_table()
+# Purchases.alter_purchases()
+# Insert data into the Vendors table
+# Vendor.insert_vendor("Lapilly Barack", "0100699066")
+
+# Insert data into the Products table
+# Products.insert_product("Red Beryl", "The cool one,shines", 8000000, 180)
 
 # Close the connection when done
 conn.close()
+
+
