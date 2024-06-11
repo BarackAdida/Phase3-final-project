@@ -1,5 +1,3 @@
-# lib/products.py
-
 from config import conn, cursor
 
 class Products:

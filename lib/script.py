@@ -1,5 +1,3 @@
-# script.py
-
 from config import conn
 from purchases import Purchases
 from products import Products
@@ -16,7 +14,6 @@ Vendor.create_table()
 # Insert data into the Products table
 # Products.insert_product("Red Beryl", "The cool one,shines", 8000000, 180)
 
-# Close the connection when done
 conn.close()
 
 

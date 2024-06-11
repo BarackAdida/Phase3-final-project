@@ -1,5 +1,3 @@
-# lib/config.py
-
 import sqlite3
 
 # Establish connection to the database
