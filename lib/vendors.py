@@ -35,3 +35,4 @@ class Vendor:
         """
         cursor.execute(sql, (name, contact_info))
         conn.commit()
+    

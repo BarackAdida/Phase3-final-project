@@ -27,3 +27,13 @@ class Purchases:
         """
         cursor.execute(sql)
         conn.commit()
+
+    @classmethod
+    def insert_purchase(cls, product_id, purchase_id, vendor_id, purchaser):
+        sql = """
+            INSERT INTO Purchases (product_id, purchase_id, vendor_id, purchaser)
+            VALUES (?, ?, ?, ?)
+        """
+        cursor.execute(sql, (product_id, purchase_id, vendor_id, purchaser))
+        conn.commit()
+

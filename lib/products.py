@@ -42,3 +42,5 @@ class Products:
         """
         cursor.execute(sql, (name, description, price, quantity))
         conn.commit()
+
+
